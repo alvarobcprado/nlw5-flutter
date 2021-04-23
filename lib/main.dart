@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nlw5/challenge/challenge_page.dart';
-
 import 'home/home_page.dart';
-import 'splash/splash_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ChallengePage(),
+      home: HomePage(),
     );
   }
 }

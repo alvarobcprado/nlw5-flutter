@@ -32,6 +32,8 @@ class QuizWidget extends StatelessWidget {
                 'Possibilita a criação de aplicativos compilados nativamente',
           ),
           AwnserWidget(
+            isRight: false,
+            isSelected: true,
             title:
                 'Possibilita a criação de aplicativos compilados nativamente',
           ),
