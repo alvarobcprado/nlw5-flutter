@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
+
 import 'package:nlw5/core/app_text_styles.dart';
 import 'package:nlw5/shared/widgets/progress_indicator_widget.dart';
 
 class QuestIndicadtorWidget extends StatelessWidget {
+  final int currentPage;
+  final int lenght;
+
+  const QuestIndicadtorWidget({
+    Key? key,
+    required this.currentPage,
+    required this.lenght,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,17 +23,17 @@ class QuestIndicadtorWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Questão 04',
+                "Questão $currentPage",
                 style: AppTextStyles.body,
               ),
               Text(
-                'de 10',
+                'de $lenght',
                 style: AppTextStyles.body,
               ),
             ],
           ),
           SizedBox(height: 16),
-          ProgressIndicatorWidget(value: 0.7),
+          ProgressIndicatorWidget(value: currentPage / lenght),
         ],
       ),
     );
