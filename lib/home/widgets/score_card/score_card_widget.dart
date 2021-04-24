@@ -1,9 +1,17 @@
-import 'package:nlw5/core/app_text_styles.dart';
-import 'package:nlw5/core/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import 'package:nlw5/core/app_colors.dart';
+import 'package:nlw5/core/app_text_styles.dart';
 import 'package:nlw5/home/widgets/chart/chart_widget.dart';
 
 class ScoreCardWidget extends StatelessWidget {
+  final int userScore;
+
+  const ScoreCardWidget({
+    Key? key,
+    required this.userScore,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,7 +33,9 @@ class ScoreCardWidget extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: ChartWidget(),
+                child: ChartWidget(
+                  value: userScore,
+                ),
               ),
               Expanded(
                 flex: 3,
